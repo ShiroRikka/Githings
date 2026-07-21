@@ -20,7 +20,7 @@ jobs:
     # 必需步骤
     # 步骤 1：运行由 GitHub 提供的标准签出操作
     - name: Checkout target repo
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         # 可选：设置要检出的分支，
         # 同步操作无论如何都会检出您的“target_sync_branch”
@@ -31,7 +31,7 @@ jobs:
     # 步骤 2：运行同步操作
     - name: Sync upstream changes
       id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
+      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.3
       with:
         ########################## 例如：main #######
         target_sync_branch: 
